@@ -1,0 +1,65 @@
+h1 {
+	text-align: center;
+	border-radius: 10px;
+	margin: auto;
+	margin-top: 1cm;
+    font-weight: bold;
+    color: rgb(98, 189, 219);
+}
+.page-header {
+    border-bottom: none;
+}
+#instructions {
+	width: 600px;
+	height: 250px;
+    text-align: center;
+	margin: auto;
+}
+   
+.panel-body {
+    font-size: 15px
+}
+
+.container {
+	margin-left: 25%;
+}
+
+#given{
+    float: left;
+    margin-right: 3px;
+	width: 200px;
+	height: 100px;
+	text-align: center;
+	display: inline-block;
+}
+
+#points {
+	width: 200px;
+	height: 100px;
+	text-align: center;
+	display: inline-block;
+}
+
+#stats {
+	width: 200px;
+	height: 100px;
+	text-align: center;
+	display: inline-block;
+}
+
+.gems {
+	width: 150px;
+    height: 150px;
+    padding: 10px;
+}
+
+#gemRow {
+	width: 920px;
+	margin: auto;
+}
+
+#buttonReset {
+    margin-left: 15cm;
+    background-color: #faebcc;
+    margin-bottom: 25px;
+}
