@@ -10,57 +10,57 @@ $(document).ready(function(){
     var matchPoints = 0;
     var wins = 0;
     var losses = 0;
-
+      //Finds random number to match//
      function givenScore(){
         matchPoints = Math.floor((Math.random() * 101) + 19);
         $("#scoreToMeet").text(matchPoints);
        console.log(matchPoints);
     };
-
+              //Creates random number when gem is clicked//
                 $("#blueGem").click(function(){
-                    if (blueStone) {
-                        yourPoints = yourPoints + blueStone;
-                        $("#yourPoints").text(yourPoints);
-                        scoreKeeper();
-                    } else {
+                    if (!blueStone) { 
                         blueStone = Math.floor((Math.random() * 11) + 1);
-                    }
+                    } 
+                    yourPoints = yourPoints + blueStone;
+                    $("#yourPoints").text(yourPoints);
+                    scoreKeeper();
                     console.log(blueStone);
                 });
 
                 $("#redGem").click( function(){
-                    if (redStone) {
-                        yourPoints = yourPoints + redStone;
-                        $("#yourPoints").text(yourPoints);
-                        scoreKeeper();
-                    } else {
+                    if (!redStone) {
                         redStone = Math.floor((Math.random () * 11) + 1);
-                    }
+                        }
+                        
+                    yourPoints = yourPoints + redStone;
+                    $("#yourPoints").text(yourPoints);
+                    scoreKeeper();
                     console.log(redStone);
                 });
 
                 $("#yellowGem").click(function(){
-                    if (yellowStone) {
-                        yourPoints = yourPoints + yellowStone;
-                        $("#yourPoints").text(yourPoints);
-                        scoreKeeper();
-                    } else {
+                    if (!yellowStone) {
                         yellowStone = Math.floor((Math.random () * 11) + 1);
-                    }
+                        } 
+
+                    yourPoints = yourPoints + yellowStone;
+                    $("#yourPoints").text(yourPoints);
+                    scoreKeeper();
                     console.log(yellowStone);
                 });
 
                 $("#greenGem").click(function(){
-                    if (greenStone) {
-                        yourPoints = yourPoints + greenStone;
-                        $("#yourPoints").text(yourPoints);
-                        scoreKeeper();
-                    } else {
-                        greenStone = Math.floor((Math.random () * 11) + 1);
+                    if (!greenStone) {
+                     greenStone = Math.floor((Math.random () * 11) + 1);
                     }
-                    console.log(greenStone);
-                });
 
+                    yourPoints = yourPoints + greenStone;
+                    $("#yourPoints").text(yourPoints);
+                    scoreKeeper();
+                    console.log(greenStone);
+                    
+                });
+                //logic for wins and losses//
                 function scoreKeeper() {
                     if (yourPoints > matchPoints){
                     losses++;
@@ -80,7 +80,7 @@ $(document).ready(function(){
                    
 
                 };
-
+                 //Resest game score and stones//
            
                 function playAgain() {
                     $("#buttonReset").click(function(){
@@ -96,5 +96,8 @@ $(document).ready(function(){
                         $("#yourPoints").text(yourPoints);
                     });
                 }
+                  //Resets app on refresh or when page is loaded//
+                    givenScore();
+                
             });
                 
